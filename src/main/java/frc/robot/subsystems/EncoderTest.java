@@ -4,6 +4,8 @@
 
 package frc.robot.subsystems;
 
+import frc.robot.constants.EncoderConstants;
+
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
@@ -20,8 +22,8 @@ public class EncoderTest extends SubsystemBase {
 
   public EncoderTest() {
 
-    encoder1 = new Encoder(0,1);
-    encoder2 = new Encoder(0,1);
+    encoder1 = new Encoder(EncoderConstants.RIGHT_ENCODER_PORT_A,EncoderConstants.RIGHT_ENCODER_PORT_B,EncoderConstants.RIGHT_ENCODER_REVERSE);
+    //encoder2 = new Encoder(0,1);
     //math XD
 
   }
@@ -29,16 +31,16 @@ public class EncoderTest extends SubsystemBase {
   @Override
   public void periodic() {
 
-    vel1 = encoder1.getVelocity();
-    vel2 = encoder2.getVelocity();
+    vel1 = encoder1.getRate();
+    //vel2 = encoder2.getVelocity();
+
+    SmartDashboard.putNumber("Encoder1", vel1);
+    //SmartDashboard.putNumber("Encoder2", vel2);
 
   }
 
   @Override
   public void simulationPeriodic() {
-
-    SmartDashboard.putNumber("Encoder1", vel1);
-    SmartDashboard.putNumber("Encoder2", vel2);
 
   }
 }

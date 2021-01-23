@@ -12,4 +12,15 @@ package frc.robot;
  * <p>It is advised to statically import this class (or one of its inner classes) wherever the
  * constants are needed, to reduce verbosity.
  */
-public final class Constants {}
+public final class Constants {
+
+    public final class EncoderConstants{
+        public static final int RIGHT_ENCODER_PORT_A        = 0;
+        public static final int RIGHT_ENCODER_PORT_B        = 1;
+        public static final boolean RIGHT_ENCODER_REVERSE   = false;
+
+        public static final int LEFT_ENCODER_PORT_A         = 2;
+        public static final int LEFT_ENCODER_PORT_B         = 3;
+        public static final boolean LEFT_ENCODER_REVERSE    = false;
+    }
+}
