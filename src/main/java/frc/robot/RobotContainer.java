@@ -26,7 +26,7 @@ public class RobotContainer {
 
   //private final GyroTest m_gyroTest = new Gyrotest();
 
-  private final EncoderTest m_encoderTest = new Encodertest();
+  private final EncoderTest m_encoderTest = new EncoderTest();
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {

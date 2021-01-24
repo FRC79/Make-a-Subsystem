@@ -4,12 +4,10 @@
 
 package frc.robot.subsystems;
 
-import frc.robot.constants.EncoderConstants;
-
+import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-
-import edu.wpi.first.wpilibj.Encoder;
+import frc.robot.Constants.EncoderConstants;
 
 
 public class EncoderTest extends SubsystemBase {
@@ -17,7 +15,7 @@ public class EncoderTest extends SubsystemBase {
   Encoder encoder1;
   Encoder encoder2;
 
-  float vel1;
+  double vel1;
   float vel2;
 
   public EncoderTest() {
