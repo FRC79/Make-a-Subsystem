@@ -17,6 +17,10 @@ public class GyroTest extends SubsystemBase {
 
   AHRS gyro;
 
+  double angle;
+  double altitude;
+  double heading;
+
   SmartDashboard m_dash;
 
   public GyroTest() {
@@ -27,9 +31,13 @@ public class GyroTest extends SubsystemBase {
   @Override
   public void periodic() {
 
-    m_dash.putNumber("Angle", gyro.getAngle());
-    m_dash.putNumber("Altitude", gyro.getAltitude());
-    m_dash.putNumber("Altitude", gyro.getCompassHeading());
+    angle = gyro.getAngle();
+    altitude = gyro.getAltitude();
+    heading = gyro.getCompassHeading();
+
+    m_dash.putNumber("Angle", angle);
+    m_dash.putNumber("Altitude", altitude);
+    m_dash.putNumber("Altitude", heading);
 
   }
 
