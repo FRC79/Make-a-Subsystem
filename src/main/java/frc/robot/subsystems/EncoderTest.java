@@ -18,12 +18,12 @@ public class EncoderTest extends SubsystemBase {
   private SmartDashboard m_dash;
 
   double vel1;
-  float vel2;
+  double vel2;
 
   public EncoderTest() {
 
     encoder1 = new Encoder(EncoderConstants.RIGHT_ENCODER_PORT_A,EncoderConstants.RIGHT_ENCODER_PORT_B,EncoderConstants.RIGHT_ENCODER_REVERSE);
-    //encoder2 = new Encoder(0,1);
+    encoder2 = new Encoder(EncoderConstants.LEFT_ENCODER_PORT_A,EncoderConstants.LEFT_ENCODER_PORT_B,EncoderConstants.LEFT_ENCODER_REVERSE);
     //math XD
 
   }
@@ -32,10 +32,10 @@ public class EncoderTest extends SubsystemBase {
   public void periodic() {
 
     vel1 = encoder1.getRate();
-    //vel2 = encoder2.getVelocity();
+    vel2 = encoder2.getRate();
 
     m_dash.putNumber("Encoder1", vel1);
-    //SmartDashboard.putNumber("Encoder2", vel2);
+    m_dash.putNumber("Encoder2", vel2);
 
   }
 

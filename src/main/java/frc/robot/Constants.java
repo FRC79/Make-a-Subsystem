@@ -17,7 +17,7 @@ public final class Constants {
     public final class EncoderConstants{
         public static final int RIGHT_ENCODER_PORT_A        = 0;
         public static final int RIGHT_ENCODER_PORT_B        = 1;
-        public static final boolean RIGHT_ENCODER_REVERSE   = false;
+        public static final boolean RIGHT_ENCODER_REVERSE   = true;
 
         public static final int LEFT_ENCODER_PORT_A         = 2;
         public static final int LEFT_ENCODER_PORT_B         = 3;
