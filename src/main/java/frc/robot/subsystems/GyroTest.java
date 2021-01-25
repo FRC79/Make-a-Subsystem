@@ -1,36 +1,38 @@
-// Copyright (c) FIRST and other WPILib contributors.
-// Open Source Software; you can modify and/or share it under the terms of
-// the WPILib BSD license file in the root directory of this project.
+// // Copyright (c) FIRST and other WPILib contributors.
+// // Open Source Software; you can modify and/or share it under the terms of
+// // the WPILib BSD license file in the root directory of this project.
 
-package frc.robot.subsystems;
+// package frc.robot.subsystems;
 
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import edu.wpi.first.wpilibj2.command.SubsystemBase;
+// import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+// import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
-import com.kauailabs.navx.frc.AHRS;
+// import com.kauailabs.navx.frc.AHRS;
 
 
-public class GyroTest extends SubsystemBase {
+// public class GyroTest extends SubsystemBase {
 
-  AHRS ahrs;
+//   AHRS ahrs;
 
-  public GyroTest() {
+//   SmartDashboard m_dash;
 
-    ahrs = new AHRS(SPI.Port.kMXP); 
+//   public GyroTest() {
 
-  }
+//     ahrs = new AHRS(SPI.Port.kMXP); 
+//     m_dash = n
+//   }
 
-  @Override
-  public void periodic() {
+//   @Override
+//   public void periodic() {
 
-    m_dash.putNumber("Angle", ahrs.getAngle());
-    m_dash.putNumber("Altitude", ahrs.getAltitude());
-    m_dash.putNumber("Altitude", ahrs.getCompassheading());
+//     m_dash.putNumber("Angle", ahrs.getAngle());
+//     m_dash.putNumber("Altitude", ahrs.getAltitude());
+//     m_dash.putNumber("Altitude", ahrs.getCompassheading());
 
-  }
+//   }
 
-  @Override
-  public void simulationPeriodic() {
-    // This method will be called once per scheduler run during simulation
-  }
-}
+//   @Override
+//   public void simulationPeriodic() {
+//     // This method will be called once per scheduler run during simulation
+//   }
+// }
