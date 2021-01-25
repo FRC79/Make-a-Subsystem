@@ -15,6 +15,8 @@ public class EncoderTest extends SubsystemBase {
   Encoder encoder1;
   Encoder encoder2;
 
+  private SmartDashboard m_dash;
+
   double vel1;
   float vel2;
 
@@ -32,7 +34,7 @@ public class EncoderTest extends SubsystemBase {
     vel1 = encoder1.getRate();
     //vel2 = encoder2.getVelocity();
 
-    SmartDashboard.putNumber("Encoder1", vel1);
+    m_dash.putNumber("Encoder1", vel1);
     //SmartDashboard.putNumber("Encoder2", vel2);
 
   }
