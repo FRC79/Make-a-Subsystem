@@ -14,13 +14,31 @@ package frc.robot;
  */
 public final class Constants {
 
-    public final class EncoderConstants{
-        public static final int RIGHT_ENCODER_PORT_A        = 0;
-        public static final int RIGHT_ENCODER_PORT_B        = 1;
-        public static final boolean RIGHT_ENCODER_REVERSE   = true;
+    public static final class DriveConstants {
 
-        public static final int LEFT_ENCODER_PORT_A         = 2;
-        public static final int LEFT_ENCODER_PORT_B         = 3;
-        public static final boolean LEFT_ENCODER_REVERSE    = false;
+        /* motors */
+        // currently set up for CK23 ports 
+        public static final int LEFT_MOTOR1_PORT    = 7;  // victor
+        public static final int LEFT_MOTOR2_PORT    = 1;  // talon
+        
+        public static final int RIGHT_MOTOR1_PORT   = 13; // talon
+        public static final int RIGHT_MOTOR2_PORT   = 8;  // victor
+
+        /* encoders */
+        public static final int RIGHT_ENCODER_PORT_A        = 0;     // port for a channel of right encoder
+        public static final int RIGHT_ENCODER_PORT_B        = 1;     // port for a channel of right encoder
+        public static final boolean RIGHT_ENCODER_REVERSE   = true;  // port for a channel of right encoder
+
+        public static final int LEFT_ENCODER_PORT_A         = 2;     // port for a channel of right encoder
+        public static final int LEFT_ENCODER_PORT_B         = 3;     // port for a channel of right encoder
+        public static final boolean LEFT_ENCODER_REVERSE    = false; // port for a channel of right encoder
+    }    
+
+
+    public static final class OIConstants {
+      /* joysticks */
+      public static final int DRIVER    = 0; // driver joystick port (usb) on laptop (changeable w/ oi in driver station)
+      public static final int OPERATOR  = 1; // driver joystick port (usb) on laptop (changeable w/ oi in driver station)
+
     }
 }
