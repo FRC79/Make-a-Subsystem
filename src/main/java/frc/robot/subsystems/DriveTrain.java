@@ -17,8 +17,10 @@ import com.kauailabs.navx.frc.AHRS;
 // SP interface for gyro
 import edu.wpi.first.wpilibj.SPI;
 
+// dashboard for debug values
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
+// libraries for victors and talons
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.DemandType;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
