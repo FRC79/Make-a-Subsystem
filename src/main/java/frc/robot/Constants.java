@@ -40,6 +40,17 @@ public final class Constants {
       public static final int DRIVER    = 0; // driver joystick port (usb) on laptop (changeable w/ oi in driver station)
       public static final int OPERATOR  = 1; // driver joystick port (usb) on laptop (changeable w/ oi in driver station)
 
+      /* button bindings */
+      public static final int NEW_MOTOR_RUN = 4; // this button turns on the motor when cicked and turns off the motor when let go
+
+    }
+
+    public static final class NewMotorConstants {
+      /* motor */
+      public static final int NEW_NOTOR_PORT  = 18; // talon
+
+      /* speed */
+      public static final double NEW_MOTOR_SPEED = 1; // -1 to 1 speed for when motor is running
     }
 }
 
