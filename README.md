@@ -1,6 +1,6 @@
 # Make-a-Subsystem
 
-The code above is the full code for last year's robot CK_23.
+The code above is the full code for last year's robot CK_23.5
 
 Suppose that to accommodate a new challenge, a wheel & motor is placed on the robot.
 
@@ -21,7 +21,7 @@ The ideal speed of the motor is not known so it will have to be easily changeabl
 make a branch titled with your first name **remember to make the branch and checkout into it before you start working**
 
 Remember to:
-1. make a subsystem
+1. make a subsystem named NewMotor
 2. make commands
 3. store constants in constants.java
 4. make an instance of the subsystem in robotContainer.java
