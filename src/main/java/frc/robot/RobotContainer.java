@@ -6,10 +6,21 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.wpilibj2.command.Command;
-
+//import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj.Joystick;
-//import edu.wpi.first.wpilibj2.command.button.JoystickButton;
+import edu.wpi.first.wpilibj2.command.button.JoystickButton;
+
+import frc.robot.Constants.OIConstants;
+
+/* import subsystems */
+import frc.robot.subsystems.NewMotor;
+
+/* import commands */
+import frc.robot.commands.NewMotor_Commands.*;
+
+
+
+
 
 
 /**
@@ -21,14 +32,13 @@ import edu.wpi.first.wpilibj.Joystick;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   /* Subsystems */
-  
-
+  public final NewMotor m_NewMotor = new NewMotor();
 
   /* commands */
 
   /* joysticks */
-  public Joystick driver = new Joystick(Constants.OIConstants.DRIVER);
-  public GenericHID operator = new Joystick(Constants.OIConstants.OPERATOR);
+  public Joystick driver = new Joystick(OIConstants.DRIVER);
+  public GenericHID operator = new Joystick(OIConstants.OPERATOR);
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
@@ -43,6 +53,11 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings(){
+    // newMotor buttons
+    /* start newMotor when button is pressed */
+    new JoystickButton(operator, OIConstants.NEW_MOTOR_RUN).whenPressed(new StartNewMotor());
+    /* stop newMotor when botton is let go */
+    new JoystickButton(operator, OIConstants.NEW_MOTOR_RUN).whenReleased(new StopNewMotor());
 
   }
 
