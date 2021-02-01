@@ -7,8 +7,18 @@ package frc.robot;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
-
+import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import edu.wpi.first.wpilibj.Joystick;
+
+import frc.robot.Constants.OIConstants;
+
+// import subsystems
+import frc.robot.subsystems.NewMotor;
+
+//import commands
+import frc.robot.commands.Drive_Commands.NewMotor_Commands.*;
+
+
 //import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
 
@@ -21,7 +31,7 @@ import edu.wpi.first.wpilibj.Joystick;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   /* Subsystems */
-  
+    public final NewMotor m_NewMotor = new NewMotor();
 
 
   /* commands */
@@ -43,7 +53,11 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings(){
-
+    //newMotor buttons
+    //start newMotor when button is pressed
+    new JoystickButton(operator, OIConstants.NEW_MOTOR_RUN).whenPressed(new StartNewMotor());
+    //stop newMotor when button is released 
+    new JoystickButton(operator, OIConstants.NEW_MOTOR_RUN).whenReleased(new StartNewMotor());
   }
 
   /**
