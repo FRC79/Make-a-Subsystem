@@ -18,13 +18,14 @@ public final class Constants {
 
         /* motors */
         // currently set up for CK23 ports 
+        
         public static final int LEFT_MOTOR1_PORT    = 7;  // victor
         public static final int LEFT_MOTOR2_PORT    = 1;  // talon
         
         public static final int RIGHT_MOTOR1_PORT   = 13; // talon
         public static final int RIGHT_MOTOR2_PORT   = 8;  // victor
 
-        /* encoders */
+        /* encoders */2
         public static final int RIGHT_ENCODER_PORT_A        = 0;     // port for a channel of right encoder
         public static final int RIGHT_ENCODER_PORT_B        = 1;     // port for a channel of right encoder
         public static final boolean RIGHT_ENCODER_REVERSE   = true;  // port for a channel of right encoder
@@ -40,6 +41,16 @@ public final class Constants {
       public static final int DRIVER    = 0; // driver joystick port (usb) on laptop (changeable w/ oi in driver station)
       public static final int OPERATOR  = 1; // driver joystick port (usb) on laptop (changeable w/ oi in driver station)
 
+      //button bindings
+      public static final int NEW_MOTOR_RUN = 4; //motor on and off button
+
+    }
+    
+    public static final class NewMotorConstants {
+      //motor
+      public static final int NEW_MOTOR_PORT = 18; //talon
+      //speed
+      public static final double NEW_MOTOR_SPEED = 1;
     }
 }
 
