@@ -9,6 +9,13 @@ import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
 
 import edu.wpi.first.wpilibj.Joystick;
+
+import frc.robot.commands.NewMotor_Commands.*;
+
+import frc.robot.subsystems.NewMotor;
+
+import frc.robot.Constants.OIConstants;
+
 //import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
 
@@ -21,7 +28,7 @@ import edu.wpi.first.wpilibj.Joystick;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   /* Subsystems */
-  
+  public final NewMotor m_NewMotor = new NewMotor();
 
 
   /* commands */
@@ -43,7 +50,11 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings(){
-
+    //NewMotor Buttons
+    //Run New Motor when pressed
+    new JoystickButton(operator, OIConstants.NEW_MOTOR_RUN).whenPressed(new MotorRun());
+    //Stop New Motor when unpressed
+    new JoystickButton(operator, OIConstants.NEW_MOTOR_RUN).whenReleased(new MotorStop());
   }
 
   /**
